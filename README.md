@@ -1,7 +1,11 @@
-* API Endpoint
+#API Endpoints
+
+## Create new User
+
+### Endpoint URL
   POST http://yoursite.com/users
 
-* Example Request
+### Example Request
 
 ``` 
   curl -X POST -H "Content-Type: application/json" \
@@ -13,9 +17,10 @@
 
 ```
 
-* Response code will be 201
+### Response code
+  201  'Created'
 
-* Example Response Body
+### Example Response Body
 
 ``` json
 {
