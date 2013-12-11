@@ -1,28 +1,29 @@
-== README
+* API Endpoint
+  POST http://yoursite.com/users
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Example Request
 
-Things you may want to cover:
+``` 
+  curl -X POST -H "Content-Type: application/json" \
+  -d { "name": "John Doe" \
+  -d "email": "john@doe.com" \
+  -d "password": "s3kr3t" \
+  -d "password_confirmation": "s3kr3t" } \
+  http://yoursite/users
 
-* Ruby version
+```
 
-* System dependencies
+* Response code will be 201
 
-* Configuration
+* Example Response Body
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+``` json
+{
+    "id": "1",
+    "name": "John Doe",
+    "email": "john@doe.com",
+    "authentication_token": "s3kr3t-token"
+}
+```
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

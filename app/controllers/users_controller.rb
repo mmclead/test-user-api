@@ -9,7 +9,7 @@ respond_to :json
     if @user.save
       render 'builders/user', locals: {user: @user}, status: 201
     else
-      render json: @user, status: 422
+      render json: @user.errors, status: 422
     end
 
   end
